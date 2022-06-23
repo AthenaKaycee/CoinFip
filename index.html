@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Static Template</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <center><h1>Coin Flip</h1></center>
+    <p>this website will help you make a decision between two things.</p>
+    <h2>Choose heads or tails:</h2>
+      <form>
+       Heads <input type="radio" id="heads" name="heads or tails"
+        value="heads" /> 
+       Tails <input type="radio" id="tails" name="heads or tails"
+        value="tails"/>
+       <p id="result"></p>
+
+       <button type="button" onclick="window.location.reload()">Flip coin</button>
+          
+
+        
+    <script>
+      let coin;
+      coin = Math.floor(Math.random() * 2);
+      if (coin < 1) {
+        document.getElementbyId("result").innerHTML="you flipped the coin and got heads"+ coin;
+      }else{
+        document.getElementbyId("result").innerHTML =
+          "you flipped the coin and got tails";
+      }
+    </script>
+  </body>
+</html>
